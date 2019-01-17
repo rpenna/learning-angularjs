@@ -3,26 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <base href="/">
         <title>Alurapic</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/efeitos.css">
         <script src="js/lib/angular.min.js"></script>
+        <script src="js/lib/angular-animate.min.js"></script>
+        <script src="js/lib/angular-route.min.js"></script>
         <script src="js/services/main.js"></script>
-        <script src="js/controllers/fotos-controllers.js"></script>
+        <script src="js/controllers/fotos-controller.js"></script>
+        <script src="js/controllers/foto-controller.js"></script>
+        <script src="js/directives/diretivas.js"></script>
     </head>
-    <body ng-controller="FotosController">
+    <body>
         <div class="container">
-            <div class="jumbotron">
-                <h1 class="text-center">Alurapic</h1>
-            </div>
-            <div class="panel panel-default" ng-repeat="foto in fotos">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{foto.titulo}}</h3>
-                </div>
-                <div class="panel-body">
-                    <img src="{{foto.url}}" alt="{{foto.titulo}}" class="img-responsive center-block">
-                </div>
-            </div>
+            <ng-view></ng-view>
         </div> <!-- fim container -->        
     </body>
 </html>
